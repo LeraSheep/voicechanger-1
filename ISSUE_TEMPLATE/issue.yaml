@@ -1,0 +1,112 @@
+name: Issue
+description: Please provide as much detail as possible to convey the history of your problem.
+body:
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of issue would you like to report?
+      multiple: true
+      options:
+        - Feature Request
+        - Documentation Feature Request
+        - Bug Report
+        - Question
+        - Others
+    validations:
+      required: true
+  - type: input
+    id: vc-client-version
+    attributes:
+      label: vc client version number
+      description: filename of you download(.zip)
+      placeholder: MMVCServerSIO_xxx_yyyy-zzzz_v.x.x.x.x.zip
+    validations:
+      required: true
+  - type: input
+    id: OS
+    attributes:
+      label: OS
+      description: OS name and version. e.g. Windows 10, Ubuntu 20.04, if you use mac, M1 or Intel.(Intel is not supported) and version venture, monterey, big sur.
+    validations:
+      required: true
+  - type: input
+    id: GPU
+    attributes:
+      label: GPU
+      description: GPU. If you have no gpu, please input none.
+    validations:
+      required: true
+  - type: dropdown
+    id: clear-setting
+    attributes:
+      label: Clear setting
+      description: Have you tried clear setting?
+      options:
+        - "no"
+        - "yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: sample-model
+    attributes:
+      label: Sample model
+      description: Sample model work fine
+      options:
+        - "no"
+        - "yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: input-chunk-num
+    attributes:
+      label: Input chunk num
+      description: Have you tried to change input chunk num?
+      options:
+        - "no"
+        - "yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: wait-for-launch
+    attributes:
+      label: Wait for a while
+      description: If the GUI won't start up, wait a several minutes. Alternatively, have you excluded it from your virus-checking software (at your own risk)?
+      options:
+        - "The GUI successfully launched."
+        - "no"
+        - "yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: read-tutorial
+    attributes:
+      label: read tutorial
+      description: Have you read the tutorial? https://github.com/w-okada/voice-changer/blob/master/tutorials/tutorial_rvc_en_latest.md
+      options:
+        - "no"
+        - "yes"
+    validations:
+      required: true
+  - type: input
+    id: vc-type
+    attributes:
+      label: Voice Changer type
+      description: Which type of voice changer you use? e.g. MMVC v1.3, RVC
+      placeholder: RVC
+    validations:
+      required: true
+  - type: input
+    id: model-type
+    attributes:
+      label: Model type
+      description: List up the type of model you use? e.g. pyTorch, ONNX, f0, no f0
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Situation
+      description: Developers spend a lot of time developing new features and resolving issues. If you really want to get it solved, please provide as much reproducible information and logs as possible.
+    validations:
+      required: true
